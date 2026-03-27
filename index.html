@@ -16,8 +16,10 @@
 
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: #f0f2f5;
-            color: #1a2535;
+            background-color: #0f172a;
+            /* Dark Background */
+            color: #e2e8f0;
+            /* Light Text */
             line-height: 1.6;
             min-height: 100vh;
         }
@@ -32,7 +34,7 @@
         #connOverlay {
             position: fixed;
             inset: 0;
-            background: rgba(10, 15, 25, .65);
+            background: rgba(0, 0, 0, .75);
             backdrop-filter: blur(4px);
             display: flex;
             align-items: center;
@@ -49,15 +51,17 @@
         }
 
         .conn-dialog {
-            background: #fff;
-            border: 1px solid #e2e8f0;
+            background: #1e293b;
+            /* Dark Card */
+            border: 1px solid #334155;
+            /* Dark Border */
             border-radius: 16px;
             padding: 32px 28px;
             width: min(94vw, 460px);
             transform: translateY(18px) scale(.97);
             transition: transform .25s, opacity .25s;
             opacity: 0;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         #connOverlay.open .conn-dialog {
@@ -72,18 +76,20 @@
         .conn-field label {
             display: block;
             font-size: .82rem;
-            color: #64748b;
+            color: #94a3b8;
+            /* Muted Text */
             margin-bottom: 6px;
             font-weight: 600;
         }
 
         .conn-field input {
             width: 100%;
-            background: #f8fafc;
-            border: 1.5px solid #e2e8f0;
+            background: #0f172a;
+            /* Dark Input */
+            border: 1.5px solid #334155;
             border-radius: 9px;
             padding: 10px 13px;
-            color: #1a2535;
+            color: #e2e8f0;
             font-family: 'Tajawal', sans-serif;
             font-size: .9rem;
             outline: none;
@@ -93,7 +99,7 @@
 
         .conn-field input:focus {
             border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, .2);
         }
 
         .conn-actions {
@@ -135,36 +141,37 @@
         }
 
         .status-ok {
-            background: #dcfce7;
-            color: #16a34a;
+            background: rgba(22, 163, 74, 0.2);
+            color: #4ade80;
             display: inline-block !important;
         }
 
         .status-err {
-            background: #fee2e2;
-            color: #dc2626;
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
             display: inline-block !important;
         }
 
         .status-loading {
-            background: #dbeafe;
-            color: #2563eb;
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
             display: inline-block !important;
         }
 
         /* ══ HEADER ══ */
         .header {
-            background: linear-gradient(135deg, #1e293b 0%, #2d3f55 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: #fff;
             padding: 20px 24px;
             border-radius: 14px;
             margin-bottom: 14px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 14px;
+            border: 1px solid #334155;
         }
 
         .header-right {
@@ -187,8 +194,8 @@
         }
 
         .stat-pill {
-            background: rgba(255, 255, 255, .1);
-            border: 1px solid rgba(255, 255, 255, .15);
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .1);
             padding: 6px 14px;
             border-radius: 50px;
             font-size: .82rem;
@@ -225,12 +232,12 @@
 
         /* ══ TOOLBAR ══ */
         .toolbar {
-            background: #fff;
-            border: 1px solid #e2e8f0;
+            background: #1e293b;
+            border: 1px solid #334155;
             border-radius: 12px;
             padding: 12px 16px;
             margin-bottom: 12px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -245,12 +252,12 @@
         .brand-btn {
             padding: 7px 16px;
             border-radius: 50px;
-            border: 1.5px solid #e2e8f0;
-            background: #f8fafc;
+            border: 1.5px solid #334155;
+            background: #0f172a;
             font-family: 'Tajawal', sans-serif;
             font-size: .82rem;
             font-weight: 600;
-            color: #64748b;
+            color: #94a3b8;
             cursor: pointer;
             transition: all .2s;
             white-space: nowrap;
@@ -258,8 +265,8 @@
 
         .brand-btn:hover {
             border-color: #93c5fd;
-            color: #2563eb;
-            background: #eff6ff;
+            color: #bfdbfe;
+            background: #1e293b;
         }
 
         .brand-btn.active {
@@ -280,12 +287,12 @@
 
         .year-select {
             padding: 8px 12px;
-            background: #f8fafc;
-            border: 1.5px solid #e2e8f0;
+            background: #0f172a;
+            border: 1.5px solid #334155;
             border-radius: 9px;
             font-family: 'Tajawal', sans-serif;
             font-size: .83rem;
-            color: #1a2535;
+            color: #e2e8f0;
             outline: none;
             cursor: pointer;
             transition: border-color .2s;
@@ -298,7 +305,7 @@
         .toolbar-divider {
             width: 1px;
             height: 26px;
-            background: #e2e8f0;
+            background: #334155;
             margin: 0 2px;
         }
 
@@ -334,14 +341,14 @@
         }
 
         .btn-ghost {
-            background: #f8fafc;
-            color: #64748b;
-            border: 1.5px solid #e2e8f0;
+            background: #0f172a;
+            color: #94a3b8;
+            border: 1.5px solid #334155;
         }
 
         .btn-ghost:hover {
             border-color: #94a3b8;
-            color: #334155;
+            color: #e2e8f0;
         }
 
         .btn-ghost:disabled {
@@ -363,17 +370,18 @@
             transform: translateY(-50%);
             font-size: 13px;
             pointer-events: none;
+            filter: grayscale(1);
         }
 
         .search-wrap input {
             width: 100%;
             padding: 8px 34px 8px 12px;
-            border: 1.5px solid #e2e8f0;
+            border: 1.5px solid #334155;
             border-radius: 9px;
             font-family: 'Tajawal', sans-serif;
             font-size: .88rem;
-            background: #f8fafc;
-            color: #1a2535;
+            background: #0f172a;
+            color: #e2e8f0;
             outline: none;
             direction: rtl;
             transition: border-color .2s, box-shadow .2s;
@@ -381,12 +389,12 @@
 
         .search-wrap input:focus {
             border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, .08);
-            background: #fff;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+            background: #0f172a;
         }
 
         .search-wrap input::placeholder {
-            color: #94a3b8;
+            color: #64748b;
         }
 
         /* ══ RESULTS BAR ══ */
@@ -403,7 +411,7 @@
         }
 
         .results-bar strong {
-            color: #3b82f6;
+            color: #60a5fa;
         }
 
         .legend {
@@ -432,8 +440,8 @@
         }
 
         .phone-item {
-            background: #fff;
-            border: 1.5px solid #e2e8f0;
+            background: #1e293b;
+            border: 1.5px solid #334155;
             border-radius: 12px;
             padding: 13px 16px 13px 20px;
             display: flex;
@@ -456,7 +464,7 @@
         }
 
         .phone-item.brand-Apple::after {
-            background: linear-gradient(180deg, #94a3b8, #64748b);
+            background: linear-gradient(180deg, #64748b, #475569);
         }
 
         .phone-item.brand-Samsung::after {
@@ -465,16 +473,16 @@
 
         /* subtle brand tint */
         .phone-item.brand-Apple {
-            background: linear-gradient(to left, #c2ccd9 0%, #fff 70%);
+            background: linear-gradient(to left, #334155 0%, #1e293b 70%);
         }
 
         .phone-item.brand-Samsung {
-            background: linear-gradient(to left, #c2ccd9 0%, #fff 70%);
+            background: linear-gradient(to left, #334155 0%, #1e293b 70%);
         }
 
         .phone-item:hover {
-            border-color: #93c5fd;
-            box-shadow: 0 4px 16px rgba(59, 130, 246, .1);
+            border-color: #60a5fa;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, .15);
             transform: translateY(-1px);
         }
 
@@ -490,17 +498,18 @@
         .phone-icon {
             width: 38px;
             height: 38px;
-            background: #f1f5f9;
+            background: #0f172a;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 19px;
             flex-shrink: 0;
+            border: 1px solid #334155;
         }
 
         .phone-details h4 {
-            color: #1a2535;
+            color: #e2e8f0;
             font-size: .93rem;
             font-weight: 700;
             margin-bottom: 3px;
@@ -521,22 +530,22 @@
         }
 
         .phone-item.brand-Apple .brand-badge {
-            background: #f1f5f9;
-            color: #475569;
+            background: #334155;
+            color: #e2e8f0;
         }
 
         .phone-item.brand-Samsung .brand-badge {
-            background: #dbeafe;
-            color: #1d4ed8;
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
         }
 
         .year-badge {
             font-size: .66rem;
             color: #94a3b8;
-            background: #f8fafc;
+            background: #0f172a;
             padding: 2px 7px;
             border-radius: 4px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #334155;
         }
 
         /* ── prices ── */
@@ -566,10 +575,12 @@
 
         .new-indicator {
             background: #16a34a;
+            box-shadow: 0 0 5px #16a34a;
         }
 
         .used-indicator {
             background: #ea580c;
+            box-shadow: 0 0 5px #ea580c;
         }
 
         .price-label {
@@ -595,29 +606,29 @@
         }
 
         .price-badge.new-badge {
-            background: #dcfce7;
-            color: #15803d;
-            border: 1.5px solid #bbf7d0;
+            background: rgba(22, 163, 74, 0.15);
+            color: #4ade80;
+            border: 1.5px solid rgba(22, 163, 74, 0.3);
         }
 
         .price-badge.new-badge:hover {
-            background: #bbf7d0;
+            background: rgba(22, 163, 74, 0.25);
         }
 
         .price-badge.used-badge {
-            background: #ffedd5;
-            color: #c2410c;
-            border: 1.5px solid #fed7aa;
+            background: rgba(234, 88, 12, 0.15);
+            color: #fb923c;
+            border: 1.5px solid rgba(234, 88, 12, 0.3);
         }
 
         .price-badge.used-badge:hover {
-            background: #fed7aa;
+            background: rgba(234, 88, 12, 0.25);
         }
 
         .price-badge.empty-badge {
-            background: #f8fafc;
-            color: #cbd5e1;
-            border: 1.5px dashed #e2e8f0;
+            background: #0f172a;
+            color: #64748b;
+            border: 1.5px dashed #334155;
             font-size: .76rem;
             font-weight: 500;
         }
@@ -640,11 +651,11 @@
 
         .price-input {
             width: 95px;
-            background: #f8fafc;
-            border: 1.5px solid #e2e8f0;
+            background: #0f172a;
+            border: 1.5px solid #334155;
             border-radius: 7px;
             padding: 5px 8px;
-            color: #1a2535;
+            color: #e2e8f0;
             font-family: 'Tajawal', sans-serif;
             font-size: .88rem;
             font-weight: 600;
@@ -656,17 +667,17 @@
 
         .price-input:focus {
             border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
         }
 
         .price-input.new-price:focus {
             border-color: #16a34a;
-            box-shadow: 0 0 0 3px rgba(22, 163, 74, .1);
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, .15);
         }
 
         .price-input.used-price:focus {
             border-color: #ea580c;
-            box-shadow: 0 0 0 3px rgba(234, 88, 12, .1);
+            box-shadow: 0 0 0 3px rgba(234, 88, 12, .15);
         }
 
         .save-btn {
@@ -696,11 +707,11 @@
 
         .btn-delete-card {
             background: transparent;
-            border: 1.5px solid #e2e8f0;
+            border: 1.5px solid #334155;
             border-radius: 8px;
             padding: 7px 10px;
             cursor: pointer;
-            color: #e2e8f0;
+            color: #475569;
             font-size: 15px;
             transition: all .2s;
             opacity: 0;
@@ -714,7 +725,7 @@
         .btn-delete-card:hover {
             border-color: #ef4444 !important;
             color: #ef4444 !important;
-            background: #fef2f2;
+            background: rgba(239, 68, 68, 0.1);
         }
 
         @media(max-width:700px) {
@@ -730,12 +741,12 @@
 
         /* ══ SKELETON ══ */
         .skeleton {
-            background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+            background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
             background-size: 200% 100%;
             animation: shimmer 1.4s infinite;
             border-radius: 12px;
             height: 66px;
-            border: 1.5px solid #e2e8f0;
+            border: 1.5px solid #334155;
         }
 
         @keyframes shimmer {
@@ -752,7 +763,7 @@
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(10, 15, 25, .55);
+            background: rgba(0, 0, 0, .75);
             backdrop-filter: blur(4px);
             display: flex;
             align-items: center;
@@ -769,14 +780,14 @@
         }
 
         .modal {
-            background: #fff;
-            border: 1px solid #e2e8f0;
+            background: #1e293b;
+            border: 1px solid #334155;
             border-radius: 16px;
             padding: 28px;
             width: min(92vw, 460px);
             transform: translateY(14px);
             transition: transform .2s;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .modal-overlay.open .modal {
@@ -787,7 +798,7 @@
             font-size: 1.05rem;
             font-weight: 800;
             margin-bottom: 20px;
-            color: #1a2535;
+            color: #e2e8f0;
         }
 
         .modal-field {
@@ -797,7 +808,7 @@
         .modal-field label {
             display: block;
             font-size: .82rem;
-            color: #64748b;
+            color: #94a3b8;
             margin-bottom: 6px;
             font-weight: 600;
         }
@@ -805,11 +816,11 @@
         .modal-field input,
         .modal-field select {
             width: 100%;
-            background: #f8fafc;
-            border: 1.5px solid #e2e8f0;
+            background: #0f172a;
+            border: 1.5px solid #334155;
             border-radius: 9px;
             padding: 10px 13px;
-            color: #1a2535;
+            color: #e2e8f0;
             font-family: 'Tajawal', sans-serif;
             font-size: .9rem;
             outline: none;
@@ -819,8 +830,8 @@
         .modal-field input:focus,
         .modal-field select:focus {
             border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
-            background: #fff;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+            background: #0f172a;
         }
 
         .modal-actions {
@@ -832,9 +843,9 @@
 
         .btn-modal-cancel {
             padding: 10px 18px;
-            background: #f1f5f9;
-            color: #64748b;
-            border: 1.5px solid #e2e8f0;
+            background: #334155;
+            color: #e2e8f0;
+            border: 1.5px solid #475569;
             border-radius: 9px;
             font-family: 'Tajawal', sans-serif;
             font-weight: 600;
@@ -844,7 +855,7 @@
         }
 
         .btn-modal-cancel:hover {
-            background: #e2e8f0;
+            background: #475569;
         }
 
         .btn-modal-save {
@@ -871,9 +882,9 @@
             text-align: center;
             padding: 60px 20px;
             color: #94a3b8;
-            background: #fff;
+            background: #1e293b;
             border-radius: 14px;
-            border: 1.5px dashed #e2e8f0;
+            border: 1.5px dashed #334155;
         }
 
         #empty .emoji {
@@ -900,7 +911,7 @@
             opacity: 0;
             z-index: 999;
             white-space: nowrap;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
         }
 
         #toast.show {
@@ -965,18 +976,17 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #f0f2f5;
+            background: #0f172a;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
+            background: #475569;
             border-radius: 3px;
         }
     </style>
 </head>
 
 <body>
-
     <!-- ── Connection Dialog ── -->
     <div id="connOverlay" class="open">
         <div class="conn-dialog">
@@ -994,9 +1004,7 @@
             </div>
         </div>
     </div>
-
     <div class="container">
-
         <!-- ── Header ── -->
         <div class="header">
             <div class="header-right">
@@ -1008,7 +1016,6 @@
                 <button class="btn-reconnect" onclick="openConnDialog()">⚙️ اتصال</button>
             </div>
         </div>
-
         <!-- ── Toolbar ── -->
         <div class="toolbar">
             <div class="brand-btns">
@@ -1029,7 +1036,6 @@
                 <input type="text" id="search" placeholder="بحث عن جهاز..." autocomplete="off">
             </div>
         </div>
-
         <!-- ── Results Bar ── -->
         <div class="results-bar">
             <div>عرض <strong id="shownCount">—</strong> جهاز</div>
@@ -1042,16 +1048,13 @@
                 </div>
             </div>
         </div>
-
         <!-- ── Phone List ── -->
         <div class="phone-list" id="grid"></div>
         <div id="empty">
             <div class="emoji">🔍</div>
             <p>لا يوجد جهاز بهذا الاسم</p>
         </div>
-
     </div>
-
     <!-- ── Add Modal ── -->
     <div class="modal-overlay" id="addModal">
         <div class="modal">
@@ -1085,21 +1088,17 @@
             </div>
         </div>
     </div>
-
     <div id="toast"></div>
-
     <script>
         let DB_URL = localStorage.getItem('turso_url') || '';
         let DB_TOKEN = localStorage.getItem('turso_token') || '';
         let phones = [];
         let searchQ = '', brandFilter = '', yearFilter = '';
-
         window.onload = () => {
             document.getElementById('dbUrl').value = DB_URL;
             document.getElementById('dbToken').value = DB_TOKEN;
             if (DB_URL && DB_TOKEN) connectDB(true);
         };
-
         /* ── Connection ── */
         function openConnDialog() {
             document.getElementById('dbUrl').value = DB_URL;
@@ -1113,7 +1112,6 @@
             el.textContent = msg;
             el.className = type ? 'status-' + type : '';
         }
-
         /* ── Turso HTTP API ── */
         async function turso(sql, args = []) {
             if (!DB_URL || !DB_TOKEN) throw new Error('غير متصل');
@@ -1139,18 +1137,15 @@
             if (data.results?.[0]?.type === 'error') throw new Error(data.results[0].error.message);
             return data.results[0]?.response?.result;
         }
-
         function rowsToObjects(result) {
             if (!result?.cols || !result?.rows) return [];
             const cols = result.cols.map(c => c.name);
             return result.rows.map(row => Object.fromEntries(cols.map((c, i) => [c, row[i]?.value ?? null])));
         }
-
         async function connectDB(silent = false) {
             DB_URL = document.getElementById('dbUrl').value.trim();
             DB_TOKEN = document.getElementById('dbToken').value.trim();
             if (!DB_URL || !DB_TOKEN) { if (!silent) showToast('أدخل URL و Token أولاً', 'error'); return; }
-
             const btn = document.getElementById('btnConnSubmit');
             btn.disabled = true;
             setDialogStatus('⏳ جاري الاتصال...', 'loading');
@@ -1169,7 +1164,6 @@
                 if (silent) openConnDialog();
             } finally { btn.disabled = false; }
         }
-
         /* ── Load ── */
         async function loadPhones() {
             showSkeletons();
@@ -1184,7 +1178,6 @@
                 document.getElementById('grid').innerHTML = '';
             }
         }
-
         /* ── Render ── */
         function getFiltered() {
             const q = searchQ.trim().toLowerCase();
@@ -1195,22 +1188,18 @@
                 return ms && mb && my;
             });
         }
-
         function fmt(v) {
             if (!v && v !== 0) return null;
             return Number(v).toLocaleString('ar-SA') + ' ر.س';
         }
-
         function render() {
             const filtered = getFiltered();
             const grid = document.getElementById('grid');
             const empty = document.getElementById('empty');
             document.getElementById('shownCount').textContent = filtered.length;
-
             if (filtered.length === 0) { grid.style.display = 'none'; empty.style.display = 'block'; return; }
             grid.style.display = 'flex';
             empty.style.display = 'none';
-
             grid.innerHTML = filtered.map(d => {
                 const np = d.new_price || '';
                 const up = d.used_price || '';
@@ -1218,71 +1207,66 @@
                 const upF = fmt(up);
                 return `
 <div class="phone-item brand-${d.brand}" data-id="${d.id}">
-  <div class="phone-info">
-    <div class="phone-icon">📱</div>
-    <div class="phone-details">
-      <h4>${escHtml(d.model)}</h4>
-      <div class="badges">
-        <span class="brand-badge">${d.brand}</span>
-        <span class="year-badge">${d.release_year}</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="phone-prices">
-    <div class="price-row">
-      <div class="price-indicator new-indicator"></div>
-      <span class="price-label">مبيع</span>
-      <span class="price-badge new-badge${np ? '' : ' empty-badge'}"
-            onclick="startEdit(this,'new_price',${d.id})">
-        ${npF || '+ أضف سعراً'}
-      </span>
-      <div class="price-input-wrap" id="edit-new-${d.id}">
-        <input type="number" class="price-input new-price"
-               placeholder="السعر..." value="${escHtml(np)}"
-               data-id="${d.id}" data-field="new_price"
-               onkeydown="handleKey(event,this)">
-        <button class="save-btn" onclick="savePrice(this)"
-                data-id="${d.id}" data-field="new_price">✓</button>
-      </div>
-    </div>
-    <div class="price-row">
-      <div class="price-indicator used-indicator"></div>
-      <span class="price-label">شراء</span>
-      <span class="price-badge used-badge${up ? '' : ' empty-badge'}"
-            onclick="startEdit(this,'used_price',${d.id})">
-        ${upF || '+ أضف سعراً'}
-      </span>
-      <div class="price-input-wrap" id="edit-used-${d.id}">
-        <input type="number" class="price-input used-price"
-               placeholder="السعر..." value="${escHtml(up)}"
-               data-id="${d.id}" data-field="used_price"
-               onkeydown="handleKey(event,this)">
-        <button class="save-btn" onclick="savePrice(this)"
-                data-id="${d.id}" data-field="used_price">✓</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="phone-actions">
-    <button class="btn-delete-card"
-            onclick="deletePhone(${d.id},'${escHtml(d.model)}')" title="حذف">🗑</button>
-  </div>
+<div class="phone-info">
+<div class="phone-icon">📱</div>
+<div class="phone-details">
+<h4>${escHtml(d.model)}</h4>
+<div class="badges">
+<span class="brand-badge">${d.brand}</span>
+<span class="year-badge">${d.release_year}</span>
+</div>
+</div>
+</div>
+<div class="phone-prices">
+<div class="price-row">
+<div class="price-indicator new-indicator"></div>
+<span class="price-label">مبيع</span>
+<span class="price-badge new-badge${np ? '' : ' empty-badge'}"
+onclick="startEdit(this,'new_price',${d.id})">
+${npF || '+ أضف سعراً'}
+</span>
+<div class="price-input-wrap" id="edit-new-${d.id}">
+<input type="number" class="price-input new-price"
+placeholder="السعر..." value="${escHtml(np)}"
+data-id="${d.id}" data-field="new_price"
+onkeydown="handleKey(event,this)">
+<button class="save-btn" onclick="savePrice(this)"
+data-id="${d.id}" data-field="new_price">✓</button>
+</div>
+</div>
+<div class="price-row">
+<div class="price-indicator used-indicator"></div>
+<span class="price-label">شراء</span>
+<span class="price-badge used-badge${up ? '' : ' empty-badge'}"
+onclick="startEdit(this,'used_price',${d.id})">
+${upF || '+ أضف سعراً'}
+</span>
+<div class="price-input-wrap" id="edit-used-${d.id}">
+<input type="number" class="price-input used-price"
+placeholder="السعر..." value="${escHtml(up)}"
+data-id="${d.id}" data-field="used_price"
+onkeydown="handleKey(event,this)">
+<button class="save-btn" onclick="savePrice(this)"
+data-id="${d.id}" data-field="used_price">✓</button>
+</div>
+</div>
+</div>
+<div class="phone-actions">
+<button class="btn-delete-card"
+onclick="deletePhone(${d.id},'${escHtml(d.model)}')" title="حذف">🗑</button>
+</div>
 </div>`;
             }).join('');
         }
-
         function escHtml(s) {
             return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         }
-
         function showSkeletons() {
             const grid = document.getElementById('grid');
             grid.style.display = 'flex';
             document.getElementById('empty').style.display = 'none';
             grid.innerHTML = Array(8).fill('<div class="skeleton"></div>').join('');
         }
-
         /* ── Price Edit (badge → input toggle) ── */
         function startEdit(badge, field, id) {
             const key = field === 'new_price' ? 'new' : 'used';
@@ -1291,7 +1275,6 @@
             wrap.classList.add('editing');
             wrap.querySelector('input').focus();
         }
-
         function finishEdit(input) {
             const id = input.dataset.id;
             const field = input.dataset.field;
@@ -1300,19 +1283,16 @@
             wrap.classList.remove('editing');
             wrap.previousElementSibling.style.display = '';
         }
-
         function handleKey(e, input) {
             if (e.key === 'Enter') input.closest('.price-input-wrap').querySelector('.save-btn').click();
             if (e.key === 'Escape') finishEdit(input);
         }
-
         async function savePrice(btn) {
             const id = btn.dataset.id;
             const field = btn.dataset.field;
             const wrap = btn.closest('.price-input-wrap');
             const input = wrap.querySelector('input.price-input');
             const val = input.value.trim();
-
             btn.classList.add('saving'); btn.textContent = '⏳';
             try {
                 await turso(`UPDATE phones SET ${field} = ?, updated_at = datetime('now') WHERE id = ?`, [val, parseInt(id)]);
@@ -1340,24 +1320,20 @@
                 setTimeout(() => { btn.textContent = '✓'; btn.classList.remove('saving'); }, 1500);
             }
         }
-
         /* ── Add Phone ── */
         function openAddModal() { document.getElementById('addModal').classList.add('open'); }
         function closeAddModal() {
             document.getElementById('addModal').classList.remove('open');
             ['newModel', 'newYear', 'newPriceNew', 'newPriceUsed'].forEach(id => document.getElementById(id).value = '');
         }
-
         async function addPhone() {
             const brand = document.getElementById('newBrand').value;
             const model = document.getElementById('newModel').value.trim();
             const year = parseInt(document.getElementById('newYear').value);
             const newPrice = document.getElementById('newPriceNew').value.trim();
             const usedPrice = document.getElementById('newPriceUsed').value.trim();
-
             if (!model) { showToast('أدخل اسم الموديل', 'error'); return; }
             if (!year || year < 2010 || year > 2030) { showToast('أدخل سنة صحيحة', 'error'); return; }
-
             try {
                 await turso('INSERT INTO phones (brand, model, release_year, new_price, used_price) VALUES (?, ?, ?, ?, ?)',
                     [brand, model, year, newPrice, usedPrice]);
@@ -1369,7 +1345,6 @@
                 else showToast('خطأ: ' + e.message, 'error');
             }
         }
-
         /* ── Delete ── */
         async function deletePhone(id, model) {
             if (!confirm(`هل تريد حذف "${model}"؟`)) return;
@@ -1380,7 +1355,6 @@
                 showToast('🗑 تم الحذف', 'info');
             } catch (e) { showToast('خطأ في الحذف', 'error'); }
         }
-
         /* ── Filters ── */
         function setBrand(btn, brand) {
             brandFilter = brand;
@@ -1388,12 +1362,10 @@
             btn.classList.add('active');
             render();
         }
-
         function updateStats() {
             document.getElementById('totalCount').textContent = phones.length;
             document.getElementById('pricedCount').textContent = phones.filter(p => p.new_price || p.used_price).length;
         }
-
         function populateYears() {
             const years = [...new Set(phones.map(d => d.release_year))].filter(Boolean).sort((a, b) => b - a);
             const sel = document.getElementById('yearFilter');
@@ -1406,7 +1378,6 @@
                 sel.appendChild(o);
             });
         }
-
         function clearFilters() {
             document.getElementById('search').value = '';
             document.getElementById('yearFilter').value = '';
@@ -1415,7 +1386,6 @@
             searchQ = ''; brandFilter = ''; yearFilter = '';
             render();
         }
-
         let searchTimer;
         document.getElementById('search').addEventListener('input', e => {
             searchQ = e.target.value;
@@ -1423,7 +1393,6 @@
             searchTimer = setTimeout(render, 200);
         });
         document.getElementById('yearFilter').addEventListener('change', e => { yearFilter = e.target.value; render(); });
-
         /* ── Toast ── */
         let toastTimer;
         function showToast(msg, type = 'success') {
@@ -1432,7 +1401,6 @@
             clearTimeout(toastTimer);
             toastTimer = setTimeout(() => t.className = '', 2200);
         }
-
         document.getElementById('addModal').addEventListener('click', e => {
             if (e.target === e.currentTarget) closeAddModal();
         });
