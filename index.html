@@ -1035,10 +1035,10 @@
             <div>عرض <strong id="shownCount">—</strong> جهاز</div>
             <div class="legend">
                 <div class="legend-item">
-                    <div class="dot" style="background:#16a34a"></div><span>جديد</span>
+                    <div class="dot" style="background:#16a34a"></div><span>مبيع</span>
                 </div>
                 <div class="legend-item">
-                    <div class="dot" style="background:#ea580c"></div><span>مستعمل</span>
+                    <div class="dot" style="background:#ea580c"></div><span>شراء</span>
                 </div>
             </div>
         </div>
@@ -1072,11 +1072,11 @@
                 <input type="number" id="newYear" placeholder="2024" min="2010" max="2030">
             </div>
             <div class="modal-field">
-                <label>سعر الجديد (اختياري)</label>
+                <label>سعر المبيع (اختياري)</label>
                 <input type="number" id="newPriceNew" placeholder="0">
             </div>
             <div class="modal-field">
-                <label>سعر المستعمل (اختياري)</label>
+                <label>سعر الشراء (اختياري)</label>
                 <input type="number" id="newPriceUsed" placeholder="0">
             </div>
             <div class="modal-actions">
@@ -1232,7 +1232,7 @@
   <div class="phone-prices">
     <div class="price-row">
       <div class="price-indicator new-indicator"></div>
-      <span class="price-label">جديد</span>
+      <span class="price-label">مبيع</span>
       <span class="price-badge new-badge${np ? '' : ' empty-badge'}"
             onclick="startEdit(this,'new_price',${d.id})">
         ${npF || '+ أضف سعراً'}
@@ -1248,7 +1248,7 @@
     </div>
     <div class="price-row">
       <div class="price-indicator used-indicator"></div>
-      <span class="price-label">مستعمل</span>
+      <span class="price-label">شراء</span>
       <span class="price-badge used-badge${up ? '' : ' empty-badge'}"
             onclick="startEdit(this,'used_price',${d.id})">
         ${upF || '+ أضف سعراً'}
