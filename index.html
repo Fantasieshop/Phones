@@ -1189,9 +1189,12 @@
             });
         }
         function fmt(v) {
-            if (!v && v !== 0) return null;
-            return Number(v).toLocaleString('ar-SA') + ' ر.س';
-        }
+    if (!v && v !== 0) return null;
+    return new Intl.NumberFormat('de-DE', {
+        style: 'currency',
+        currency: 'EUR'
+    }).format(v);
+}
         function render() {
             const filtered = getFiltered();
             const grid = document.getElementById('grid');
